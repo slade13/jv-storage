@@ -23,6 +23,9 @@ public class StorageImpl<K, V> implements Storage<K, V> {
                 return;
             }
         }
+        if (size == MAX_SIZE) {
+            return;
+        }
         keys[size] = key;
         values[size] = value;
         size++;
